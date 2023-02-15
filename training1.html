@@ -3,31 +3,35 @@
     <head>
         <title>CSS</title>
         <style>
-            body {
-                background-color: grey;
+            .container {
+                border: 5px solid #ffcc5c;
+                display: flex;
+                /* block: ada height ada width
+inline-block: gabungan
+flex: fleksible
+grid: pakai row column (list item)
+ */
+                justify-content: flex-end;
             }
-            h2 {
-                color: rgb(0, 0, 255);
+            .container > div {
+                /* untuk div yang ada dalam kelas container */
+                padding: 10px;
+                text-align: center;
+                font-size: 14sp;
+                color: #ffeead;
+                border: 2px solid;
+                background-color: green;
             }
-            p {
-                color: red;
-                font-family: Impact;
-                text-shadow: 4px 4px 4px black;
-                /* value: x y blur*/
-                text-align: right;
-            }
-            .mobil {
-                color: blue;
-            }
-            #avanza {
-                color: greenyellow;
+            .logo {
+                margin-right: auto;
             }
         </style>
     </head>
     <body>
-        <h2>Hallo</h2>
-        <p>Hai</p>
-        <p class="mobil" id="avanza">Ini Avanza</p>
-        <p class="mobil" id="alya">Ini Alya</p>
+        <nav class="container">
+            <img src="https://assets.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" class="logo" width="40" height="40">
+            <div class="home">Home</div>
+            <div class="search">Search</div>
+            <div class="logout">Logout</div>
     </body>
 </html>
