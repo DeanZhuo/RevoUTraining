@@ -3,35 +3,24 @@
     <head>
         <title>CSS</title>
         <style>
-            .container {
-                border: 5px solid #ffcc5c;
-                display: flex;
-                /* block: ada height ada width
-inline-block: gabungan
-flex: fleksible
-grid: pakai row column (list item)
- */
-                justify-content: flex-end;
+            div {
+                background-color: lightblue;
+                width: 400px;
+                height: 400px;
+                margin-left: 200px;
             }
-            .container > div {
-                /* untuk div yang ada dalam kelas container */
-                padding: 10px;
-                text-align: center;
-                font-size: 14sp;
-                color: #ffeead;
-                border: 2px solid;
-                background-color: green;
-            }
-            .logo {
-                margin-right: auto;
+            h1 {
+                color: white;
+                background-color: blue;
+                padding: 5px 10px 15px 20px;
+                /* top right bottom left*/
+                border: 20px ridge yellow;
             }
         </style>
     </head>
     <body>
-        <nav class="container">
-            <img src="https://assets.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" class="logo" width="40" height="40">
-            <div class="home">Home</div>
-            <div class="search">Search</div>
-            <div class="logout">Logout</div>
+        <div>
+            <h1>Contoh Border</h1>
+        </div>
     </body>
 </html>
