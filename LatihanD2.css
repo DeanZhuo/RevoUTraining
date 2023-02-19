@@ -10,6 +10,12 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+/* nacvigation - hide */
+@media (max-width: 580px) {
+    .navContainer > a {
+        display: none;
+    }
+}
 .navContainer > a {
     padding: 16px;
     width: 90px;
@@ -37,8 +43,14 @@ header {
 .content {
     flex-direction: row;
     display: flex;
-    gap: 4%;
+    gap: 30px;
     margin: 4%;
+}
+/* flext container - responsive */
+@media (max-width: 850px) {
+    .content {
+        flex-direction: column;
+    }
 }
 /* form */
 .forms {
