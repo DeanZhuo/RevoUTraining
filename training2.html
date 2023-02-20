@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan Week 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="training2.css">
+    </head>
+    <body>
+        <!-- navigation -->
+        <nav class="navContainer">
+            <img src="https://assets.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" class="logo" width="40" height="40">
+            <a class="active" href="#home">Home</a>
+            <a href="#profile">My Profile</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#contact">Message Us</a>
+        </nav>
+
+        <!-- header -->
+        <header>
+            <h1>Hi <span id="username"></span>, welcome.</h1>
+            <p>Ini adalah website latihan pertama</p>
+        </header>
+
+        <!-- script -->
+        <!-- buat elemen dengan id yang dicari sebelum menulis script -->
+        <script>
+            var username = prompt("Enter your name", "Triska");
+            var element = document.getElementById("username").innerText = username;
+            console.log(element);
+
+        </script>
+
+        <!-- main content -->
+        <main class="content">
+            <!-- form -->
+            <div style="flex: 1;">
+                <form class="forms" name="message-form" onsubmit="return validateForm()">
+                    <label for="name">Nama</label>
+                    :
+                    <input type="text" id="name" name="name" placeholder="Nama">
+                    <label for="birthdate">Tanggal Lahir</label>
+                    :
+                    <input type="date" id="birthdate" name="birthdate" placeholder="Tanggal Lahir">
+                    <label for="gender">Jenis Kelamin</label>
+                    :
+                    <div>
+                        <input type="radio" id="male" name="gender" value="Laki-Laki">
+                        <label for="male">Laki-Laki</label>
+                        <input type="radio" id="female" name="gender" value="Perempuan">
+                        <label for="female">Perempuan</label>
+                    </div>
+                    <label for="message">Pesan</label>
+                    :
+                    <textarea name="message" id="message" rows="5" cols="64" placeholder="Pesan"></textarea> 
+                    <input style="grid-column-start: 1; grid-column-end: 4; margin-top: 10px;" type="submit" value="Submit">
+                </form>
+            </div>
+            <!-- hasil -->
+            <div style="flex: 1;">
+                <p>Nama: <span id="sender-fullname"></span></p>
+                <p>Tanggal lahir: <span id="sender-birthdate"></span></p>
+                <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                <p>Pesan: <span id="sender-message"></span></p>
+            </div>
+            <!-- form script -->
+            <script>
+                function validateForm(){
+                    var name = document.forms['message-form']['name'].value;
+                    var birthdate = document.forms['message-form']['birthdate'].value;
+                    var gender = document.forms['message-form']['gender'].value;
+                    var message = document.forms['message-form']['message'].value;
+
+                    if (name == "" || birthdate == "" || gender == "")  {
+                        alert("Input tidak boleh kosong!");
+                        return false;
+                    }
+
+                    document.getElementById("sender-fullname").innerText = name;
+                    document.getElementById("sender-birthdate").innerText = birthdate;
+                    document.getElementById("sender-gender").innerText = gender;
+                    document.getElementById("sender-message").innerText = message;
+
+                    return false;
+                }
+                
+            </script>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <hr>
+            <p>Created by RevoU 2023</p>
+        </footer>
+    </body>
+</html>

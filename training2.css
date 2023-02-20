@@ -1,0 +1,85 @@
+/* css reset */
+
+/* general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* navigation */
+.navContainer {
+    margin: 10px 4% 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+/* nacvigation - hide */
+@media (max-width: 580px) {
+    .navContainer > a {
+        display: none;
+    }
+}
+.navContainer > a {
+    padding: 16px;
+    width: 90px;
+    text-align: center;
+    font-size: 14sp;
+    color: #ffcc5c;
+    text-decoration: none;
+    background-color: #2f2f2f;
+}
+.navContainer > a.active {
+    background-color: #ffcc5c;
+    color: #2f2f2f;
+}
+.navContainer > a:hover {
+    background-color: #eedd7c;
+    color: #2f2f2f;
+}
+.logo {
+    margin-right: auto;
+}
+header {
+    margin: 0px 5%;
+}
+/* main content */
+.content {
+    flex-direction: row;
+    display: flex;
+    gap: 30px;
+    margin: 4%;
+}
+/* flext container - responsive */
+@media (max-width: 850px) {
+    .content {
+        flex-direction: column;
+    }
+}
+/* form */
+.forms {
+    display: grid;
+    grid-template-columns: 100px 10px auto;
+    row-gap: 3px;
+}
+/* table */
+.dataTable {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+.dataTable tr:hover {
+    background-color: #ffcc5c;
+    }
+.dataTable th {
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 8px;
+}
+.dataTable td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+/* footer */
+footer > p {
+    text-align: end;
+    margin: 1% 3%;
+}
