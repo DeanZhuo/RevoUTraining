@@ -10,12 +10,6 @@ body {
     display: flex;
     justify-content: flex-end;
 }
-/* nacvigation - hide */
-@media (max-width: 580px) {
-    .navContainer > a {
-        display: none;
-    }
-}
 .navContainer > a {
     padding: 16px;
     width: 90px;
@@ -33,6 +27,12 @@ body {
     background-color: #eedd7c;
     color: #2f2f2f;
 }
+
+
+
+.menu {
+    background-color: azure;
+}
 .logo {
     margin-right: auto;
 }
@@ -46,11 +46,9 @@ header {
     gap: 30px;
     margin: 4%;
 }
-/* flext container - responsive */
-@media (max-width: 850px) {
-    .content {
-        flex-direction: column;
-    }
+/* slide */
+.slides {
+    width: 80%;
 }
 /* form */
 .forms {
@@ -82,4 +80,10 @@ header {
 footer > p {
     text-align: end;
     margin: 1% 3%;
+}
+/* responsive */
+@media only screen and (min-width: 850px) {
+    .menu {
+        background-color: #eedd7c;
+    }
 }
